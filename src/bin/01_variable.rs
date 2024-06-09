@@ -39,7 +39,7 @@ fn main() {
 
     //u8 type can represent byte
     let t: u8 = b'A'; //byte
-    let t: u16 = 1;
+    let t: u16 = 1u16; //Type can be denoted at the end of the number.
     let t: u32 = 1;
     let t: u64 = 1;
     let t: u128 = 1;
@@ -48,7 +48,7 @@ fn main() {
     //floating point numbers
     let t: f32 = 1.0;
     let t: f64 = 1.0;
-    
+
     //character is 4 byte and supports unicode.
     let c: char = '한';
 

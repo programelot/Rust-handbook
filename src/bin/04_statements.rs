@@ -23,7 +23,7 @@ fn main() {
     //20 <= 25 < 30
     println!("b : {b}");
     //b : 1
-    
+
     let mut c = 0;
     let d = loop {
         //It loops until meet the break
@@ -106,10 +106,10 @@ fn main() {
     // a 3
     // a 2
     // a 1
-    let v = [1,2,3,4,5];
-    for e in v{
+    let v = [1, 2, 3, 4, 5];
+    for e in v {
         println!("for loop 1 {e}");
-    };
+    }
     // for loop 1 1
     // for loop 1 2
     // for loop 1 3
@@ -121,9 +121,9 @@ fn main() {
 
     //Notice that it is exlusive for end point
     //rev() makes it in the reverse order
-    for e in (1..5).rev(){
+    for e in (1..5).rev() {
         println!("for loop 2 {e}");
-    };
+    }
     // for loop 2 4
     // for loop 2 3
     // for loop 2 2

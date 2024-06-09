@@ -1,24 +1,24 @@
-fn take_owner_i32(x : i32){
+fn take_owner_i32(x: i32) {
     println!("{x}");
 }
 
-fn take_owner_string1(x : String){
+fn take_owner_string1(x: String) {
     println!("{x}");
 }
 
-fn take_owner_string2(x : String) -> String{
+fn take_owner_string2(x: String) -> String {
     println!("{x}");
     x
 }
 
-fn take_reference(x : &String){
+fn take_reference(x: &String) {
     //Impossible
     //x.push_str(" mut ref");
-    
+
     println!("{x}");
 }
 
-fn take_mut_reference(x : &mut String){
+fn take_mut_reference(x: &mut String) {
     x.push_str(" mut ref");
     println!("{x}");
 }
@@ -31,7 +31,7 @@ fn main() {
     let x = 1;
     take_owner_i32(x);
     // 1
-    
+
     //Possible
     println!("{x}");
     // 1
@@ -64,14 +64,13 @@ fn main() {
     //Hello mut ref
     println!("{s}");
     //Hello mut ref
-    
+
     let mut s = String::from("Hello");
     //Reference can be a lot.
     let s1 = &s;
     let s2 = &s;
     println!("{s1} {s2}");
     //Hello Hello
-
 
     let mut s = String::from("Hello");
     //Mutable reference need to be only one.
@@ -96,12 +95,11 @@ fn main() {
     //Mutable reference can exists after immutable reference used for all purpose already.
     let s2 = &mut s;
     println!("{s2}");
-    
+
     //Summary
     //There must be one mutable reference or multiple immutable reference.
 
-    
-    let mut v : String =  String::from("s안녕");
+    let mut v: String = String::from("s안녕");
     let i = 1;
     let j = 4;
     let s = &v[i..j];
