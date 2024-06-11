@@ -19,7 +19,7 @@ mod module_3 {
 }
 
 //Make a shortcut for foo function in module_3
-//It makes foo function in the same module as foo of module_3.
+//It makes foo function in the same scope as foo of module_3.
 use module_3::foo;
 
 fn main() {
@@ -30,7 +30,7 @@ fn main() {
     // module_3's foo function.
 
     // It will call module3's foo function.
-    foo(); 
+    foo();
     // module_3's foo function.
 
     //It will call sub module function either.
@@ -56,13 +56,13 @@ fn main() {
     //Please check module_2/mod.rs
     crate::module_2::module_24::foo();
     //module_24's foo function
-    
+
     //super finds parents.
-    
+
     //Impossible, super can only exists at the start of the path.
     //module_2::super::module_2::module_24::bar();
 
-    //Function below calls module2's bar in module_24 using super.    
+    //Function below calls module2's bar in module_24 using super.
     crate::module_2::module_24::bar();
     //module2's bar
 }

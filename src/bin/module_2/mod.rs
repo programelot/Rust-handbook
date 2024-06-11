@@ -9,7 +9,6 @@ pub fn foo() {
     // module_21::foo();
     // module_23::foo();
 
-    
     // Visibility is based on current location.
     // crate::module_2::module_22::foo();
     // module_22's foo Function
@@ -21,6 +20,6 @@ pub fn foo() {
     // module_24's foo function
 }
 
-fn bar(){
+fn bar() {
     println!("module2's bar");
 }
