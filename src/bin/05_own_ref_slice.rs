@@ -107,4 +107,10 @@ fn main() {
     //If string is unicode, it must be sliced properly.
     println!("{s}");
     //안
+
+    let v = [1, 2, 3, 4, 5];
+    let x: &[i32] = &v[2..4]; // &[T] is a slice type of T.
+    for i in 0..2 {
+        println!("{0}", x[i]);
+    }
 }

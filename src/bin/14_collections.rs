@@ -50,6 +50,7 @@ fn main() {
     // 1 2 3 4 5
 
     let mut v = vec![1, 2, 3, 4, 5];
+
     for e in &mut v {
         *e += 10;
     }
