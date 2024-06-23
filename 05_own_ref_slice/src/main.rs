@@ -2,11 +2,11 @@ fn take_owner_i32(x: i32) {
     println!("{x}");
 }
 
-fn take_owner_string1(x: String) {
+fn take_owner_string(x: String) {
     println!("{x}");
 }
 
-fn take_owner_string2(x: String) -> String {
+fn take_owner_and_return_string(x: String) -> String {
     println!("{x}");
     x
 }
@@ -32,81 +32,85 @@ fn main() {
     take_owner_i32(x);
     // 1
 
-    //Possible
+    // Possible
+    // Function takes ownership.
+    // However, it has copy trait(i32).
+    // Therefore, instead of take it, it copies the value.
     println!("{x}");
     // 1
 
     let x = String::from("2");
-    take_owner_string1(x);
+    take_owner_string(x);
     // 2
 
-    //Impossible
-    //println!("{x}");
+    // Impossible
+    // Function already took ownership.
+    // println!("{x}");
 
     let x = String::from("3");
-    let v = take_owner_string2(x);
+    let v = take_owner_and_return_string(x);
     // 3
     println!("{v}");
     // 3
 
-    //Reference doesn't take owner ship.
-    //It borrows variables.
+    // Reference doesn't take owner ship.
+    // It borrows variables.
     let s = String::from("Hello");
     take_reference(&s);
-    //Hello
+    // Hello
     println!("{s}");
-    //Hello
+    // Hello
 
     let mut s = String::from("Hello");
     take_mut_reference(&mut s);
-    //Hello mut ref
+    // Hello mut ref
     take_reference(&s);
-    //Hello mut ref
+    // Hello mut ref
     println!("{s}");
-    //Hello mut ref
+    // Hello mut ref
 
     let mut s = String::from("Hello");
-    //Reference can be a lot.
+    // Reference can be a lot.
     let s1 = &s;
     let s2 = &s;
     println!("{s1} {s2}");
-    //Hello Hello
+    // Hello Hello
 
     let mut s = String::from("Hello");
-    //Mutable reference need to be only one.
+    // Mutable reference need to be only one.
     let mut s1 = &mut s;
-    //Impossible (No more than two mutable reference)
-    //let mut s2 = &mut s;
+    // Impossible (No more than two mutable reference)
+    // let mut s2 = &mut s;
     println!("{s1}");
-    //Hello
+    // Hello
 
     let mut s = String::from("Hello");
     let s1 = &s;
-    //Impossible
-    //Mutable reference can not exists with immutable reference.
-    //let s2 = &mut s;
+    // Impossible
+    // Mutable reference can not exists with immutable reference.
+    // let s2 = &mut s;
     println!("{s1}");
-    //Hello
+    // Hello
 
     let mut s = String::from("Hello");
     let s1 = &s;
     println!("{s1}");
-    //Hello
-    //Mutable reference can exists after immutable reference used for all purpose already.
+    // Hello
+    // Mutable reference can exists after immutable reference used for all purpose already.
     let s2 = &mut s;
     println!("{s2}");
 
-    //Summary
-    //There must be one mutable reference or multiple immutable reference.
+    // Summary
+    // There must be one mutable reference or multiple immutable reference.
 
     let mut v: String = String::from("s안녕");
     let i = 1;
     let j = 4;
     let s = &v[i..j];
-    //Arrays can be sliced by index.
-    //If string is unicode, it must be sliced properly.
+    // Arrays can be sliced by index.
+    // If string is unicode, it must be sliced properly.
     println!("{s}");
-    //안
+    // 안
 
     let v = [1, 2, 3, 4, 5];
     let x: &[i32] = &v[2..4]; // &[T] is a slice type of T.

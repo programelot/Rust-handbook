@@ -1,7 +1,25 @@
-[package]
-name = "Rust-handbook"
-version = "0.1.0"
-edition = "2021"
-
-[dependencies]
-rand = "0.8.5"
+[workspace]
+members = [
+    "01_variable",
+    "02_operation",
+    "03_tuple_array",
+    "04_if_loop_statement",
+    "05_own_ref_slice",
+    "06_struct",
+    "07_debugging",
+    "08_method",
+    "09_enum_match_if_let",
+    "10_option",
+    "11_crate_module",
+    "12_accessibility",
+    "13_use",
+    "14_collection",
+    "15_panic_file",
+    "16_generic_trait",
+    "17_lifetime",
+    "18_test",
+    "19_command_line_stderr",
+    "20_closure_iterator",
+    "21_documents",
+    "22_workspace_dependency",
+]

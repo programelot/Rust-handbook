@@ -24,6 +24,8 @@ fn search<'a>(query: &str, content: &'a str) -> Vec<File_line<'a>> {
 
 fn main() {
     // Arguments that has been passed with execution can get from std::env::args()
+    // Example input would be as below.
+    // cargo run -p command_line_stderr -- frog hello.txt
     let args: Vec<String> = env::args().collect();
 
     if args.len() != 3 {

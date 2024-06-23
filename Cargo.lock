@@ -3,17 +3,50 @@
 version = 3
 
 [[package]]
-name = "Rust-handbook"
+name = "accessibility"
 version = "0.1.0"
-dependencies = [
- "rand",
-]
 
 [[package]]
 name = "cfg-if"
 version = "1.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
+
+[[package]]
+name = "closure_iterator"
+version = "0.1.0"
+
+[[package]]
+name = "collection"
+version = "0.1.0"
+
+[[package]]
+name = "command_line_stderr"
+version = "0.1.0"
+
+[[package]]
+name = "crate_module"
+version = "0.1.0"
+
+[[package]]
+name = "debugging"
+version = "0.1.0"
+
+[[package]]
+name = "dependent"
+version = "0.1.0"
+
+[[package]]
+name = "ducoments"
+version = "0.1.0"
+
+[[package]]
+name = "enum_match_if_let"
+version = "0.1.0"
+
+[[package]]
+name = "generic_trait"
+version = "0.1.0"
 
 [[package]]
 name = "getrandom"
@@ -27,10 +60,38 @@ dependencies = [
 ]
 
 [[package]]
+name = "if_loop_statement"
+version = "0.1.0"
+
+[[package]]
 name = "libc"
 version = "0.2.155"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "97b3888a4aecf77e811145cadf6eef5901f4782c53886191b2f693f24761847c"
+
+[[package]]
+name = "lifetime"
+version = "0.1.0"
+
+[[package]]
+name = "method"
+version = "0.1.0"
+
+[[package]]
+name = "operation"
+version = "0.1.0"
+
+[[package]]
+name = "option"
+version = "0.1.0"
+
+[[package]]
+name = "own_ref_slice"
+version = "0.1.0"
+
+[[package]]
+name = "panic_file"
+version = "0.1.0"
 
 [[package]]
 name = "ppv-lite86"
@@ -69,7 +130,37 @@ dependencies = [
 ]
 
 [[package]]
+name = "struct"
+version = "0.1.0"
+
+[[package]]
+name = "test"
+version = "0.1.0"
+
+[[package]]
+name = "tuple_array"
+version = "0.1.0"
+
+[[package]]
+name = "use"
+version = "0.1.0"
+dependencies = [
+ "rand",
+]
+
+[[package]]
+name = "variable"
+version = "0.1.0"
+
+[[package]]
 name = "wasi"
 version = "0.11.0+wasi-snapshot-preview1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9c8d87e72b64a3b4db28d11ce29237c246188f4f51057d65a7eab63b7987e423"
+
+[[package]]
+name = "workspace_dependency"
+version = "0.1.0"
+dependencies = [
+ "dependent",
+]

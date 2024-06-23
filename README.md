@@ -16,7 +16,7 @@ Please change 01_variable to corresponding cases.
 
 ```bash
 cd Rust-handbook
-cargo run --bin 01_variable
+cargo run -p 01_variable
 ```
 
 or

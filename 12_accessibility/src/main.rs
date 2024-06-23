@@ -60,7 +60,7 @@ fn main() {
     let mut alex_mom = Parent::generate(String::from("Alex"), 30);
     let mut alex_mom_job = school::Job::parent(alex_mom);
     if let school::Job::parent(mut am) = alex_mom_job {
-        //THis code is bit massy since it takes ownership of alex_mom_job to am.
+        //This code is bit massy since it takes ownership of alex_mom_job to am.
         am.age = 40;
         am.child = String::from("No body");
         println!("{0} {1}", am.age, am.child);

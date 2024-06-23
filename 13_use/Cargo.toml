@@ -1,0 +1,19 @@
+[package]
+name = "use"
+version = "0.1.0"
+edition = "2021"
+description = "Examples about the way to use modules."
+license = "MIT OR Apache-2.0"
+
+# To use external module, it must be denoted at Cargo.toml
+[dependencies]
+rand = "0.8.5"
+
+# Comments can be written with #.
+# Profile can be set with [profile.name].
+# There are two names "dev" for debug build.
+# "release" for release build.
+
+# For example, it forces no optimization for debug build
+[profile.dev]
+opt-level=0

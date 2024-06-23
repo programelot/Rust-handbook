@@ -8,6 +8,9 @@
 // Test can be done with functions with certain word in the name.
 // e.x) cargo test success
 
+// Test can be done with specific cargo.
+// e.x) cargo test -p test
+
 // #[cfg(test)] denotes this will build when only using cargo test.
 // cfg is a acronym of configuration.
 // It is not included to the build process (cargo run or cargo build)
@@ -63,7 +66,7 @@ mod tests {
         assert_eq!(hello, "Hello world!");
     }
     // ---- tests::failure_assert_eq stdout ----
-    // thread 'tests::failure_assert_eq' panicked at src\bin\18_test.rs:63:9:
+    // thread 'tests::failure_assert_eq' panicked at src\bin\18_test.rs:66:9:
     // assertion `left == right` failed
     // left: "hello"
     // right: "Hello world!"
@@ -87,7 +90,7 @@ mod tests {
             nine
         );
     }
-    // thread 'tests::failure_assert_with_message' panicked at src\bin\18_test.rs:84:9:
+    // thread 'tests::failure_assert_with_message' panicked at src\bin\18_test.rs:87:9:
     // assertion `left == right` failed: Checked that nine was nine but it wasn't. The value was 10
     // left: 10
     // right: 9
@@ -121,7 +124,7 @@ mod tests {
     }
     // ---- tests::failure_println stdout ----
     // Test done.
-    // thread 'tests::failure_println' panicked at src\bin\18_test.rs:120:9:
+    // thread 'tests::failure_println' panicked at src\bin\18_test.rs:123:9:
     // panic
 
     #[test]

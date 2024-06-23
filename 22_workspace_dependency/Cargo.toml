@@ -1,0 +1,19 @@
+[package]
+name = "workspace_dependency"
+version = "0.1.0"
+edition = "2021"
+description = "Examples for workspace dependencies."
+license = "MIT OR Apache-2.0"
+
+# Comments can be written with #.
+# Profile can be set with [profile.name].
+# There are two names "dev" for debug build.
+# "release" for release build.
+
+# For example, it forces no optimization for debug build
+[profile.dev]
+opt-level=0 
+
+# add dependent module for this project.
+[dependencies]
+dependent = { path = "../aux_dependent" }
