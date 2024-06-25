@@ -41,14 +41,12 @@ pub fn function_to_be_explained(x: i32) -> i32 {
 // It helps programmer to program easiler and finds a good point to look at.
 pub use a::b;
 
-
-pub mod a{
-    pub mod b{
-        pub fn foo(){
+pub mod a {
+    pub mod b {
+        pub fn foo() {
             println!("foo");
         }
-    }    
+    }
 }
 
-fn main() {
-}
+fn main() {}

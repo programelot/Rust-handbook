@@ -4,7 +4,7 @@ use dependent;
 
 fn main() {
     let v = 1i32;
-    
+
     // Call foo in dependent module
     let m = dependent::foo(v);
 

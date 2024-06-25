@@ -8,7 +8,7 @@ fn main() {
     let e: i8 = a % b;
     println!("{a} % {b} = {e}");
     // 10 % 3 = 1
-    
+
     let a: i8 = -10;
     let b: i8 = 3;
     let e: i8 = a % b;
@@ -32,7 +32,7 @@ fn main() {
     let e: i8 = a / b;
     println!("{a} / {b} = {e}");
     // 125 / 10 = 12
-    
+
     let a: f32 = 4.5;
     let b: f32 = 1.8;
     let e: f32 = a / b;
@@ -86,7 +86,7 @@ fn main() {
     println!("e : {e0} {e1}, f : {f0} {f1}");
     //e : -128 true, f : 127 false
 
-    let e = a.saturating_add(b);  //Limits value within maximum and minimum value
+    let e = a.saturating_add(b); //Limits value within maximum and minimum value
     let f = c.saturating_add(d);
     println!("e : {e}, f : {f}");
     //e : 127, f : 127

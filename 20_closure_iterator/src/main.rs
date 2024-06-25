@@ -133,7 +133,7 @@ fn main() {
 
     // Iterator has a map function that generate other iterator.
     // It maps each element of the iterator to a new element by passing it to arguments.
-    
+
     // Notice that function below doesn't work since this iterator is lazy.
     // v1.iter().map(|x| x + 1);
 
@@ -143,20 +143,27 @@ fn main() {
 
     for e in &v1 {
         print!("{e}, ");
-    }println!("");
+    }
+    println!("");
     // 1, 2, 3,
 
     for e in &v2 {
         print!("{e}, ");
-    }println!("");
+    }
+    println!("");
     // 2, 3, 4,
 
-    
-    let v3 = vec![String::from("Ada"), String::from("James"), String::from("John"), String::from("Lee")];
+    let v3 = vec![
+        String::from("Ada"),
+        String::from("James"),
+        String::from("John"),
+        String::from("Lee"),
+    ];
 
     for e in &v3 {
         print!("{e}, ");
-    }println!("");
+    }
+    println!("");
     // Ada, James, John, Lee,
 
     // filter() filters elements.
@@ -168,19 +175,21 @@ fn main() {
 
     for e in &v4 {
         print!("{e}, ");
-    }println!("");
+    }
+    println!("");
     // James, John,
 
-    let v5 = vec![1,2,3,4,5];
+    let v5 = vec![1, 2, 3, 4, 5];
     let v6 = vec![1.0, 2.0, 3.0];
-    
+
     // Zip pairs iterator with target iteratable.
     // If it doesn't have enough element, length will be mached with the smaller one.
 
-    let v7 : Vec<_> = v5.iter().zip(&v6).collect();
+    let v7: Vec<_> = v5.iter().zip(&v6).collect();
 
-    for e in v7{
+    for e in v7 {
         print!("{:?} ", e);
-    }println!("");
+    }
+    println!("");
     // (1, 1.0) (2, 2.0) (3, 3.0)
 }

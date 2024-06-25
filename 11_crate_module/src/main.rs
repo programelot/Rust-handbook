@@ -61,7 +61,7 @@ fn main() {
 
     // Impossible, super can only exists at the start of the path.
     // module_2::super::module_2::module_24::bar();
- 
+
     // Function below calls module2's bar in module_24 using super.
     crate::module_2::module_24::bar();
     // module2's bar
