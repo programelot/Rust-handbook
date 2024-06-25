@@ -1,4 +1,4 @@
-pub fn foo(i: i32) -> i32{
+pub fn foo(i: i32) -> i32 {
     i + 10
 }
 
