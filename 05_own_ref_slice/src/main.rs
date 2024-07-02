@@ -117,4 +117,18 @@ fn main() {
     for i in 0..2 {
         println!("{0}", x[i]);
     }
+    // 3
+    // 4
+
+    let mut x = vec![
+        String::from("Hello"),
+        String::from("World"),
+        String::from("This"),
+        String::from("Cool"),
+        String::from("World"),
+    ]; // &[T] is a slice type of T.
+    let sl: Vec<_> = x.iter().step_by(2).collect();
+    for e in sl {
+        println!("{0}", e);
+    }
 }

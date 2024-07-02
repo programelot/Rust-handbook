@@ -35,4 +35,29 @@ fn main() {
     //5
     read(&absent_number);
     //None
+
+    // Instead of taking ownership of s, v can just take the value of option and change it to None.
+    let mut s = Some(String::from("Text"));
+    let mut v = s.take();
+    println!("s : {:#?}", s);
+    // s : None
+    println!("v : {:#?}", v);
+    // v : Some(
+    //     "Text",
+    // )
+
+    let a = Some(String::from("Hello"));
+    // a is Option<String>
+    // as_ref reutnrs Option<&String> in this case.
+    let b = a.as_ref();
+    println!("a : {:#?}", a);
+    // a : Some(
+    //     "Hello",
+    // )
+
+    // Notice that b has been dereferenced in here.
+    println!("b : {:#?}", b);
+    // b : Some(
+    //     "Hello",
+    // )
 }

@@ -53,6 +53,11 @@ impl Query {
     }
 }
 
+fn return_color_red() -> Color {
+    println!("Return_color_red called");
+    Color::Red
+}
+
 //Rust program starts with main function
 //Function starts with fn
 //Function parameter exists in parenthesis.
@@ -102,4 +107,16 @@ fn main() {
         println!("Not a write query.");
     }
     // Not a write query.
+
+    // Notice that if let will be always be called when it has been used.
+    if let Color::Red = return_color_red() {
+        println!("If let red passed");
+    }
+    // Return_color_red called
+    // If let red passed
+
+    if let Color::Blue = return_color_red() {
+        println!("If let blue passed");
+    }
+    // Return_color_red called
 }

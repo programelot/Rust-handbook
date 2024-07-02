@@ -2,7 +2,10 @@ use std::io;
 
 // Generic struct can be defined as follow.
 // T denotes the templated type.
-struct Point<T> {
+// generic can have a default type as following way.
+// In this case, default time is a i32
+// struct Point<T> {
+struct Point<T = i32> {
     x: T,
     y: T,
 }
@@ -66,13 +69,13 @@ trait Summary {
 // Trait name goes after impl and for indicates which struct is it for.
 impl Summary for Pair<u32, u32> {
     fn summarize1(&self) -> String {
-        format!("({0}, {1})", self.x, self.y)
+        format!("integer ({0}, {1})", self.x, self.y)
     }
 }
 
 impl Summary for Pair<f32, f32> {
     fn summarize1(&self) -> String {
-        format!("({0}, {1})", self.x, self.y)
+        format!("floating point number ({0}, {1})", self.x, self.y)
     }
 
     // Overriding function can be done by the same way to implement a method.
@@ -163,8 +166,8 @@ impl<T: std::fmt::Display> Point<T> {
     fn to_string(&self) -> String {
         format! {"({0}, {1})", self.x, self.y}
     }
-    //It actually included in the ToString trait.
-    //Therefore, use it to implement it.
+    // It actually included in the ToString trait.
+    // Therefore, use it to implement it.
 }
 
 // To use trait, it must be included with use.
@@ -176,13 +179,13 @@ fn main() {
     let p2 = generate_point(3.0f32, 4.0f32);
 
     println!("p1 = ({0},{1})", p1.x(), p1.y());
-    //p1 = (1,2)
+    // p1 = (1,2)
 
-    //Impossible, distance function not defined for Point<u32>.
+    // Impossible, distance function not defined for Point<u32>.
     // println!("Distance to p1 is {0}",p1.distance());
 
     println!("p2 = ({0},{1})", p2.x(), p2.y());
-    //p2 = (3,4)
+    // p2 = (3,4)
 
     println!("Distance to p2 is {0}", p2.distance());
     //Distance to p2 is 5
@@ -197,11 +200,11 @@ fn main() {
     // p1 = (1,C)
 
     println!("p2 = ({0},{1})", p2.x, p2.y);
-    // p2 = (V,3)
+    // p2 = (V,2)
 
     let p3 = p1.mix(p2);
     println!("p3 = ({0},{1})", p3.x, p3.y);
-    // p3 = (1,3)
+    // p3 = (1,2)
 
     // Impossible, Summary trait didn't implemented for this type.
     // println!("P1 is {0}", p1.summarize());
@@ -213,10 +216,10 @@ fn main() {
     };
 
     println!("P1 is {0}", p1.summarize1());
-    // P1 is (1, 2)
+    // P1 is integer (1, 2)
 
     println!("P2 is {0}", p2.summarize1());
-    // P2 is (1, 2)
+    // P2 is floating point number (1, 2)
 
     println!("P1 is {0}", p1.summarize2());
     // P1 is Unknown
@@ -230,10 +233,10 @@ fn main() {
     pairs.push(Pair { x: 5u32, y: 6u32 });
 
     print_summaries1(&pairs);
-    //(1, 2) (3, 4) (5, 6)
+    // integer (1, 2) integer (3, 4) integer (5, 6)
 
     print_summaries2(&pairs);
-    //(1, 2) (3, 4) (5, 6)
+    // integer (1, 2) integer (3, 4) integer (5, 6)
 
     let p = Point { x: 'c', y: 'd' };
 

@@ -1,8 +1,8 @@
 [package]
-name = "closure_iterator"
+name = "Box_Rc_Drop_Deref"
 version = "0.1.0"
 edition = "2021"
-description = "Examples about closure and iterator."
+description = "Examples for Box, Reference counter, drop trait and dereference trait."
 license = "MIT OR Apache-2.0"
 
 # Comments can be written with #.
@@ -12,4 +12,4 @@ license = "MIT OR Apache-2.0"
 
 # For example, it forces no optimization for debug build
 [profile.dev]
-opt-level=0
+opt-level=0 

@@ -106,6 +106,7 @@ fn main() {
     // a 3
     // a 2
     // a 1
+
     let v = [1, 2, 3, 4, 5];
     for e in v {
         println!("for loop 1 {e}");

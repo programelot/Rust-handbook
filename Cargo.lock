@@ -3,6 +3,14 @@
 version = 3
 
 [[package]]
+name = "Box_Rc_Drop_Deref"
+version = "0.1.0"
+
+[[package]]
+name = "RefCell"
+version = "0.1.0"
+
+[[package]]
 name = "accessibility"
 version = "0.1.0"
 
@@ -13,7 +21,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
 
 [[package]]
-name = "closure_iterator"
+name = "closure_function_pointer"
 version = "0.1.0"
 
 [[package]]
@@ -41,6 +49,13 @@ name = "ducoments"
 version = "0.1.0"
 
 [[package]]
+name = "empty_type"
+version = "0.1.0"
+dependencies = [
+ "rand",
+]
+
+[[package]]
 name = "enum_match_if_let"
 version = "0.1.0"
 
@@ -60,7 +75,11 @@ dependencies = [
 ]
 
 [[package]]
-name = "if_loop_statement"
+name = "if_loop_for_while"
+version = "0.1.0"
+
+[[package]]
+name = "iterator"
 version = "0.1.0"
 
 [[package]]
@@ -74,12 +93,44 @@ name = "lifetime"
 version = "0.1.0"
 
 [[package]]
+name = "memory_leak"
+version = "0.1.0"
+
+[[package]]
 name = "method"
 version = "0.1.0"
 
 [[package]]
+name = "mutex_arc"
+version = "0.1.0"
+dependencies = [
+ "rand",
+]
+
+[[package]]
+name = "name_collision"
+version = "0.1.0"
+dependencies = [
+ "rand",
+]
+
+[[package]]
+name = "newtype"
+version = "0.1.0"
+dependencies = [
+ "rand",
+]
+
+[[package]]
 name = "operation"
 version = "0.1.0"
+
+[[package]]
+name = "operator_overloading"
+version = "0.1.0"
+dependencies = [
+ "rand",
+]
 
 [[package]]
 name = "option"
@@ -92,6 +143,13 @@ version = "0.1.0"
 [[package]]
 name = "panic_file"
 version = "0.1.0"
+
+[[package]]
+name = "pattern"
+version = "0.1.0"
+dependencies = [
+ "rand",
+]
 
 [[package]]
 name = "ppv-lite86"
@@ -130,16 +188,41 @@ dependencies = [
 ]
 
 [[package]]
+name = "sized_type_oop"
+version = "0.1.0"
+dependencies = [
+ "rand",
+]
+
+[[package]]
 name = "struct"
 version = "0.1.0"
+
+[[package]]
+name = "super_trait"
+version = "0.1.0"
+dependencies = [
+ "rand",
+]
 
 [[package]]
 name = "test"
 version = "0.1.0"
 
 [[package]]
+name = "thread_message_passing"
+version = "0.1.0"
+
+[[package]]
 name = "tuple_array"
 version = "0.1.0"
+
+[[package]]
+name = "unsafe"
+version = "0.1.0"
+dependencies = [
+ "rand",
+]
 
 [[package]]
 name = "use"
@@ -157,6 +240,10 @@ name = "wasi"
 version = "0.11.0+wasi-snapshot-preview1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9c8d87e72b64a3b4db28d11ce29237c246188f4f51057d65a7eab63b7987e423"
+
+[[package]]
+name = "weak"
+version = "0.1.0"
 
 [[package]]
 name = "workspace_dependency"
